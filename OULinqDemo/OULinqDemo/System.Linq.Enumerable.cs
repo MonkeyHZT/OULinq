@@ -100,8 +100,84 @@ namespace System.Linq
         //   System.ArgumentNullException:
         //     source 或 func 或 resultSelector 为 null。
         public static TResult Aggregate<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func, Func<TAccumulate, TResult> resultSelector);
-
-
+        //
+        // 摘要:
+        //     确定序列中的所有元素是否满足条件。
+        //
+        // 参数:
+        //   source:
+        //     包含要应用谓词的元素的 System.Collections.Generic.IEnumerable<T>。
+        //
+        //   predicate:
+        //     用于测试每个元素是否满足条件的函数。
+        //
+        // 类型参数:
+        //   TSource:
+        //     source 中的元素的类型。
+        //
+        // 返回结果:
+        //     如果源序列中的每个元素都通过指定谓词中的测试，或者序列为空，则为 true；否则为 false。
+        //
+        // 异常:
+        //   System.ArgumentNullException:
+        //     source 或 predicate 为 null。
+        public static bool All<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate);
+        //
+        // 摘要:
+        //     确定序列是否包含任何元素。
+        //
+        // 参数:
+        //   source:
+        //     要检查是否为空的 System.Collections.Generic.IEnumerable<T>。
+        //
+        // 类型参数:
+        //   TSource:
+        //     source 中的元素的类型。
+        //
+        // 返回结果:
+        //     如果源序列包含任何元素，则为 true；否则为 false。
+        //
+        // 异常:
+        //   System.ArgumentNullException:
+        //     source 为 null。
+        public static bool Any<TSource>(this IEnumerable<TSource> source);
+        //
+        // 摘要:
+        //     确定序列中的任何元素是否都满足条件。
+        //
+        // 参数:
+        //   source:
+        //     一个 System.Collections.Generic.IEnumerable<T>，其元素将应用谓词。
+        //
+        //   predicate:
+        //     用于测试每个元素是否满足条件的函数。
+        //
+        // 类型参数:
+        //   TSource:
+        //     source 中的元素的类型。
+        //
+        // 返回结果:
+        //     如果源序列中的任何元素都通过指定谓词中的测试，则为 true；否则为 false。
+        //
+        // 异常:
+        //   System.ArgumentNullException:
+        //     source 或 predicate 为 null。
+        public static bool Any<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate);
+        //
+        // 摘要:
+        //     返回类型为 System.Collections.Generic.IEnumerable<T> 的输入。
+        //
+        // 参数:
+        //   source:
+        //     类型为 System.Collections.Generic.IEnumerable<T> 的序列。
+        //
+        // 类型参数:
+        //   TSource:
+        //     source 中的元素的类型。
+        //
+        // 返回结果:
+        //     类型为 System.Collections.Generic.IEnumerable<T> 的输入序列。
+        public static IEnumerable<TSource> AsEnumerable<TSource>(this IEnumerable<TSource> source);
         //
         // 摘要:
         //     计算可以为 null 的 System.Decimal 值序列的平均值。

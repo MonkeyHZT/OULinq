@@ -24,4 +24,14 @@
 {
     return [self count] > 0;
 }
+
+- (BOOL)Any:(BoolBlock)boolBlock
+{
+    for (int i = 0; i < [self count]; i++) {
+        if (boolBlock(self[i])) {
+            return YES;
+        }
+    }
+    return NO;
+}
 @end

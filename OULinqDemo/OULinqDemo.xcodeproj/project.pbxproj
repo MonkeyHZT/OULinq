@@ -16,6 +16,7 @@
 		68E31EF91BFA04A7008D2BD5 /* NSArray+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */; settings = {ASSET_TAGS = (); }; };
 		68E31EFC1BFA04B4008D2BD5 /* NSDictionary+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */; settings = {ASSET_TAGS = (); }; };
 		68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */; settings = {ASSET_TAGS = (); }; };
+		68E31F0F1BFA2355008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31F0E1BFA2355008D2BD5 /* System.Linq.Enumerable.cs */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = System.Linq.Enumerable.cs; sourceTree = "<group>"; };
 		68E31EFF1BFA12FB008D2BD5 /* OULinq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OULinq.h; sourceTree = "<group>"; };
 		68E31F041BFA15E5008D2BD5 /* OULinqDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OULinqDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E31F0E1BFA2355008D2BD5 /* System.Linq.Enumerable.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = System.Linq.Enumerable.cs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		68E31EDD1BFA0387008D2BD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68E31F0E1BFA2355008D2BD5 /* System.Linq.Enumerable.cs */,
 				68E31EDE1BFA0387008D2BD5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -203,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E31F0F1BFA2355008D2BD5 /* System.Linq.Enumerable.cs in Resources */,
 				68E31EED1BFA0387008D2BD5 /* LaunchScreen.storyboard in Resources */,
 				68E31EEA1BFA0387008D2BD5 /* Assets.xcassets in Resources */,
 				68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */,
@@ -418,6 +422,7 @@
 				68E31EF31BFA0387008D2BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68E31F0B1BFA15E5008D2BD5 /* Build configuration list for PBXNativeTarget "OULinqDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +431,7 @@
 				68E31F0D1BFA15E5008D2BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

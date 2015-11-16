@@ -34,29 +34,13 @@ typedef BOOL (^BoolBlock)(id parameter);
 */
 - (BOOL)Any;
 
-/*
- 
- // 摘要:
- //     确定序列中的任何元素是否都满足条件。
- //
- // 参数:
- //   source:
- //     一个 System.Collections.Generic.IEnumerable<T>，其元素将应用谓词。
- //
- //   predicate:
- //     用于测试每个元素是否满足条件的函数。
- //
- // 类型参数:
- //   TSource:
- //     source 中的元素的类型。
- //
- // 返回结果:
- //     如果源序列中的任何元素都通过指定谓词中的测试，则为 true；否则为 false。
- //
- // 异常:
- //   System.ArgumentNullException:
- //     source 或 predicate 为 null。
- public static bool Any<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate);
+/**
+ *  检测集合中是否有任意一个元素满足条件
+ *
+ *  @param boolBlock block表达式.表示是否满足条件
+ *
+ *  @return YES表示至少有一个满足条件.NO表示全部不满足
  */
+-(BOOL)Any:(BoolBlock)boolBlock;
 
 @end
