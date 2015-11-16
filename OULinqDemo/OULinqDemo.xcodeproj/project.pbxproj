@@ -13,7 +13,20 @@
 		68E31EE81BFA0387008D2BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EE61BFA0387008D2BD5 /* Main.storyboard */; };
 		68E31EEA1BFA0387008D2BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EE91BFA0387008D2BD5 /* Assets.xcassets */; };
 		68E31EED1BFA0387008D2BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EEB1BFA0387008D2BD5 /* LaunchScreen.storyboard */; };
+		68E31EF91BFA04A7008D2BD5 /* NSArray+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */; settings = {ASSET_TAGS = (); }; };
+		68E31EFC1BFA04B4008D2BD5 /* NSDictionary+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */; settings = {ASSET_TAGS = (); }; };
+		68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68E31F091BFA15E5008D2BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68E31ED21BFA0387008D2BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E31ED91BFA0387008D2BD5;
+			remoteInfo = OULinqDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		68E31EDA1BFA0387008D2BD5 /* OULinqDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OULinqDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +39,24 @@
 		68E31EE91BFA0387008D2BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68E31EEC1BFA0387008D2BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68E31EEE1BFA0387008D2BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68E31EF71BFA04A6008D2BD5 /* NSArray+OU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OU.h"; sourceTree = "<group>"; };
+		68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OU.m"; sourceTree = "<group>"; };
+		68E31EFA1BFA04B4008D2BD5 /* NSDictionary+OU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OU.h"; sourceTree = "<group>"; };
+		68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OU.m"; sourceTree = "<group>"; };
+		68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = System.Linq.Enumerable.cs; sourceTree = "<group>"; };
+		68E31EFF1BFA12FB008D2BD5 /* OULinq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OULinq.h; sourceTree = "<group>"; };
+		68E31F041BFA15E5008D2BD5 /* OULinqDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OULinqDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		68E31ED71BFA0387008D2BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68E31F011BFA15E5008D2BD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +69,7 @@
 		68E31ED11BFA0387008D2BD5 = {
 			isa = PBXGroup;
 			children = (
+				68E31EF41BFA0462008D2BD5 /* OUFile */,
 				68E31EDC1BFA0387008D2BD5 /* OULinqDemo */,
 				68E31EDB1BFA0387008D2BD5 /* Products */,
 			);
@@ -51,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				68E31EDA1BFA0387008D2BD5 /* OULinqDemo.app */,
+				68E31F041BFA15E5008D2BD5 /* OULinqDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +108,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68E31EF41BFA0462008D2BD5 /* OUFile */ = {
+			isa = PBXGroup;
+			children = (
+				68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */,
+				68E31EFF1BFA12FB008D2BD5 /* OULinq.h */,
+				68E31EF71BFA04A6008D2BD5 /* NSArray+OU.h */,
+				68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */,
+				68E31EFA1BFA04B4008D2BD5 /* NSDictionary+OU.h */,
+				68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */,
+			);
+			name = OUFile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +141,24 @@
 			productReference = 68E31EDA1BFA0387008D2BD5 /* OULinqDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		68E31F031BFA15E5008D2BD5 /* OULinqDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68E31F0B1BFA15E5008D2BD5 /* Build configuration list for PBXNativeTarget "OULinqDemoTests" */;
+			buildPhases = (
+				68E31F001BFA15E5008D2BD5 /* Sources */,
+				68E31F011BFA15E5008D2BD5 /* Frameworks */,
+				68E31F021BFA15E5008D2BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68E31F0A1BFA15E5008D2BD5 /* PBXTargetDependency */,
+			);
+			name = OULinqDemoTests;
+			productName = OULinqDemoTests;
+			productReference = 68E31F041BFA15E5008D2BD5 /* OULinqDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +171,11 @@
 					68E31ED91BFA0387008D2BD5 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = M6M3PHR9R8;
+					};
+					68E31F031BFA15E5008D2BD5 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = M6M3PHR9R8;
+						TestTargetID = 68E31ED91BFA0387008D2BD5;
 					};
 				};
 			};
@@ -128,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				68E31ED91BFA0387008D2BD5 /* OULinqDemo */,
+				68E31F031BFA15E5008D2BD5 /* OULinqDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +205,15 @@
 			files = (
 				68E31EED1BFA0387008D2BD5 /* LaunchScreen.storyboard in Resources */,
 				68E31EEA1BFA0387008D2BD5 /* Assets.xcassets in Resources */,
+				68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */,
 				68E31EE81BFA0387008D2BD5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68E31F021BFA15E5008D2BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,12 +225,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				68E31EE51BFA0387008D2BD5 /* ViewController.m in Sources */,
+				68E31EFC1BFA04B4008D2BD5 /* NSDictionary+OU.m in Sources */,
 				68E31EE21BFA0387008D2BD5 /* AppDelegate.m in Sources */,
+				68E31EF91BFA04A7008D2BD5 /* NSArray+OU.m in Sources */,
 				68E31EDF1BFA0387008D2BD5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68E31F001BFA15E5008D2BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68E31F0A1BFA15E5008D2BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68E31ED91BFA0387008D2BD5 /* OULinqDemo */;
+			targetProxy = 68E31F091BFA15E5008D2BD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68E31EE61BFA0387008D2BD5 /* Main.storyboard */ = {
@@ -265,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OULinqDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,9 +368,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OULinqDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68E31F0C1BFA15E5008D2BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OULinqDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OULinqDemo.app/OULinqDemo";
+			};
+			name = Debug;
+		};
+		68E31F0D1BFA15E5008D2BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OULinqDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OULinqDemo.app/OULinqDemo";
 			};
 			name = Release;
 		};
@@ -299,6 +416,14 @@
 			buildConfigurations = (
 				68E31EF21BFA0387008D2BD5 /* Debug */,
 				68E31EF31BFA0387008D2BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68E31F0B1BFA15E5008D2BD5 /* Build configuration list for PBXNativeTarget "OULinqDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68E31F0C1BFA15E5008D2BD5 /* Debug */,
+				68E31F0D1BFA15E5008D2BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
