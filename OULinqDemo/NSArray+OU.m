@@ -23,7 +23,7 @@
 - (BOOL)Any
 {
     return [self count] > 0;
-}
+} 
 
 - (BOOL)Any:(BoolBlock)boolBlock
 {
