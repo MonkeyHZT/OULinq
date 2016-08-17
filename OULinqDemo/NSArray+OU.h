@@ -28,14 +28,14 @@ typedef id (^IDBlock)(id parameter);
 *
 *  @return YES表示全部满足条件.NO表示有部分或者全部不满足
 */
-- (BOOL)All:(BoolBlock)boolBlock;
+- (BOOL)all:(BoolBlock)boolBlock;
 
 /**
 *  检测集合中是否元素(不等于nil并且内容个数大于0)
 *
 *  @return YES表示有元素.NO表示无
 */
-- (BOOL)Any;
+- (BOOL)any;
 
 
 /**
@@ -43,7 +43,7 @@ typedef id (^IDBlock)(id parameter);
  *
  *  @return YES表示至少有一个满足条件.NO表示全部不满足
  */
-- (BOOL)Any:(BoolBlock)boolBlock;
+- (BOOL)any:(BoolBlock)boolBlock;
 /**
  *  @author Hzt, 2016-12-29 14:12:05
  *
@@ -51,7 +51,7 @@ typedef id (^IDBlock)(id parameter);
  *
  *  @return 第一个满足条件的对象.没有则抛异常
  */
-- (id)First:(BoolBlock)boolBlock;
+- (id)first:(BoolBlock)boolBlock;
 /**
  *  @author Hzt, 2016-12-29 14:12:12
  *
@@ -59,7 +59,7 @@ typedef id (^IDBlock)(id parameter);
  *
  *  @return 第一个满足条件的对象.没有则返回nil
  */
-- (id)FirstOrNull:(BoolBlock)boolBlock;
+- (id)firstOrNull:(BoolBlock)boolBlock;
 /**
  *  @author Hzt, 2016-12-29 14:12:12
  *
@@ -67,7 +67,7 @@ typedef id (^IDBlock)(id parameter);
  *
  *  @return 所有满足条件的对象集合.如果没有找到则count为0
  */
-- (NSArray*)Where:(BoolBlock)boolBlock;
+- (NSArray*)where:(BoolBlock)boolBlock;
 
 //public static bool Contains<TSource>(this IEnumerable<TSource> source, TSource value);
 
@@ -93,7 +93,7 @@ typedef id (^IDBlock)(id parameter);
  *
  *  @return 返回一个截取到的arr
  */
--(NSArray *)arrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex;
+-(NSArray *)ArrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex;
 /**
  *  @brief 从startIndex开始,截取length个长度的对象
  *

@@ -10,8 +10,9 @@
 
 @implementation NSArray (OU)
 
-- (BOOL)All:(BoolBlock)boolBlock
+- (BOOL)all:(BoolBlock)boolBlock
 {
+    NSAssert(boolBlock, @"未设置参数");
     for (int i = 0; i < [self count]; i++) {
         if (!boolBlock(self[i])) {
             return NO;
@@ -20,13 +21,14 @@
     return YES;
 }
 
-- (BOOL)Any
+- (BOOL)any
 {
     return [self count] > 0;
 }
 
-- (BOOL)Any:(BoolBlock)boolBlock
+- (BOOL)any:(BoolBlock)boolBlock
 {
+    NSAssert(boolBlock, @"未设置参数");
     for (int i = 0; i < [self count]; i++) {
         if (boolBlock(self[i])) {
             return YES;
@@ -35,9 +37,10 @@
     return NO;
 }
 
-- (id)First:(BoolBlock)boolBlock
+- (id)first:(BoolBlock)boolBlock
 {
-    id obj = [self FirstOrNull:boolBlock];
+    NSAssert(boolBlock, @"未设置参数");
+    id obj = [self firstOrNull:boolBlock];
     if (!obj) {
         [NSException raise:@"没有找到任何满足条件的对象"
                     format:@"没有找到任何满足条件的对象"];
@@ -45,8 +48,9 @@
     return obj;
 }
 
-- (id)FirstOrNull:(BoolBlock)boolBlock
+- (id)firstOrNull:(BoolBlock)boolBlock
 {
+    NSAssert(boolBlock, @"未设置参数");
     for (int i = 0; i < [self count]; i++) {
         id item = [self objectAtIndex:i];
         if (boolBlock(item)) {
@@ -56,8 +60,9 @@
     return nil;
 }
 
-- (NSArray*)Where:(BoolBlock)boolBlock
+- (NSArray*)where:(BoolBlock)boolBlock
 {
+    NSAssert(boolBlock, @"未设置参数");
     NSMutableArray* result = [NSMutableArray array];
     for (int i = 0; i < [self count]; i++) {
         id item = [self objectAtIndex:i];
