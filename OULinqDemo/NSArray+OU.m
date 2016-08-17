@@ -6,6 +6,8 @@
 //  Copyright © 2015年 com.houzhitong. All rights reserved.
 //
 
+#define forEach(max) for (int i = 0; i < max; i++)
+#define forEachSelfCount forEach(self.count)
 #import "NSArray+OU.h"
 
 @implementation NSArray (OU)
@@ -13,7 +15,8 @@
 - (BOOL)all:(BoolBlock)boolBlock
 {
     NSAssert(boolBlock, @"未设置参数");
-    for (int i = 0; i < [self count]; i++) {
+    forEachSelfCount
+    {
         if (!boolBlock(self[i])) {
             return NO;
         }
@@ -23,13 +26,14 @@
 
 - (BOOL)any
 {
-    return [self count] > 0;
+    return self.count > 0;
 }
 
 - (BOOL)any:(BoolBlock)boolBlock
 {
     NSAssert(boolBlock, @"未设置参数");
-    for (int i = 0; i < [self count]; i++) {
+    forEachSelfCount
+    {
         if (boolBlock(self[i])) {
             return YES;
         }
@@ -41,17 +45,15 @@
 {
     NSAssert(boolBlock, @"未设置参数");
     id obj = [self firstOrNull:boolBlock];
-    if (!obj) {
-        [NSException raise:@"没有找到任何满足条件的对象"
-                    format:@"没有找到任何满足条件的对象"];
-    }
+    NSAssert(obj, @"有找到任何满足条件的对象");
     return obj;
 }
 
 - (id)firstOrNull:(BoolBlock)boolBlock
 {
     NSAssert(boolBlock, @"未设置参数");
-    for (int i = 0; i < [self count]; i++) {
+    forEachSelfCount
+    {
         id item = [self objectAtIndex:i];
         if (boolBlock(item)) {
             return item;
@@ -64,7 +66,8 @@
 {
     NSAssert(boolBlock, @"未设置参数");
     NSMutableArray* result = [NSMutableArray array];
-    for (int i = 0; i < [self count]; i++) {
+    forEachSelfCount
+    {
         id item = [self objectAtIndex:i];
         if (boolBlock(item)) {
             [result addObject:item];
@@ -102,15 +105,54 @@
     return resultArrayM.copy;
 }
 
--(NSArray *)convertToOtherObjectWithBlock:(IDBlock)block{
+- (NSArray*)convertToOtherObjectWithBlock:(IDBlock)block
+{
     NSAssert(block, @"未设置参数");
-    NSMutableArray *resultArrayM = [NSMutableArray arrayWithCapacity:self.count];
-    for (int i = 0; i<self.count; i++) {
+    NSMutableArray* resultArrayM = [NSMutableArray arrayWithCapacity:self.count];
+    forEachSelfCount
+    {
         id item = self[i];
         id resultObj = block(item);
         [resultArrayM addObject:resultObj];
     }
     return resultArrayM;
+}
+
+- (NSArray*)joinWithArray:(NSArray*)array
+{
+    NSMutableArray* resultArrayM = [NSMutableArray arrayWithCapacity:self.count + array.count];
+    [resultArrayM addObjectsFromArray:self];
+    [resultArrayM addObjectsFromArray:array];
+    return resultArrayM.copy;
+}
+
+- (id)last
+{
+    return [self lastObject];
+}
+- (id)lastWithBlock:(BoolBlock)block
+{
+    NSAssert(block, @"未设置参数");
+    NSMutableArray* resultArray = [NSMutableArray array];
+    forEachSelfCount
+    {
+        id item = self[i];
+        if (block(item)) {
+            [resultArray addObject:item];
+        }
+    }
+    return [resultArray last];
+}
+- (float)sumWithBlock:(FloatBlock)block
+{
+    NSAssert(block, @"未设置参数");
+    float sum = 0;
+    forEachSelfCount
+    {
+        id item = self[i];
+        sum += block(item);
+    }
+    return sum;
 }
 
 @end

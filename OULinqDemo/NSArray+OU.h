@@ -18,6 +18,12 @@ typedef BOOL (^BoolBlock)(id parameter);
  *  @return 返回一个id类型对象
  */
 typedef id (^IDBlock)(id parameter);
+/**
+ *  @brief 传入一个id类型参数.返回一个float
+ *
+ *  @return 返回一个float
+ */
+typedef float (^FloatBlock)(id parameter);
 
 @interface NSArray (OU)
 
@@ -109,5 +115,30 @@ typedef id (^IDBlock)(id parameter);
  *  @return 新的结果集对象
  */
 -(NSArray *)convertToOtherObjectWithBlock:(IDBlock)block;
+/**
+ *  @brief 与参数集合组合并返回一个新的数据
+ *
+ *  @return 返回一个自身与参数组合后的集合
+ */
+-(NSArray *)joinWithArray:(NSArray *)array;
+/**
+ *  @brief 返回最后一个对象
+ *
+ *  @return 最后一个对象.如果本身count为0的话,返回nil
+ */
+-(id)last;
+
+/**
+ *  @brief 返回序列中满足条件的最后一个元素；如果未找到这样的元素，则返回nil
+ *
+ *  @return 满足条件的最后一个元素；如果未找到这样的元素，则返回nil
+ */
+-(id)lastWithBlock:(BoolBlock)block;
+/**
+ *  @brief 遍历每个item.并在block中返回要统计的属性值.累加所有后返回
+ *
+ *  @return block中返回属性的总数
+ */
+-(float)sumWithBlock:(FloatBlock)block;
 
 @end
