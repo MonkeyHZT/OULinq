@@ -19,10 +19,14 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSArray *array = @[@"a",@"b",@"c"];
-    NSLog(@"%d",[array Any:^BOOL(NSString * parameter) {
-        return [parameter isEqual: @"a"];
-    }]);
+//    NSArray *array = @[@"a",@"b",@"c"];
+//    NSLog(@"%d",[array Any:^BOOL(NSString * parameter) {
+//        return [parameter isEqual: @"a"];
+//    }]);
+    
+    
+    NSArray *array = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6"];
+    NSLog(@"%@",[array arrayWithStartIndex:1 endIndex:0]);
 }
 
 @end

@@ -10,71 +10,102 @@
 
 @implementation NSArray (OU)
 
-- (BOOL)All:(BoolBlock)boolBlock {
-  for (int i = 0; i < [self count]; i++) {
-    if (!boolBlock(self[i])) {
-      return NO;
+- (BOOL)All:(BoolBlock)boolBlock
+{
+    for (int i = 0; i < [self count]; i++) {
+        if (!boolBlock(self[i])) {
+            return NO;
+        }
     }
-  }
-  return YES;
+    return YES;
 }
 
-- (BOOL)Any {
-  return [self count] > 0;
+- (BOOL)Any
+{
+    return [self count] > 0;
 }
 
-- (BOOL)Any:(BoolBlock)boolBlock {
-  for (int i = 0; i < [self count]; i++) {
-    if (boolBlock(self[i])) {
-      return YES;
+- (BOOL)Any:(BoolBlock)boolBlock
+{
+    for (int i = 0; i < [self count]; i++) {
+        if (boolBlock(self[i])) {
+            return YES;
+        }
     }
-  }
-  return NO;
+    return NO;
 }
 
-- (id)First:(BoolBlock)boolBlock {
-  id obj = [self FirstOrNull:boolBlock];
-  if (!obj) {
-    [NSException raise:@"没有找到任何满足条件的对象"
-                format:@"没有找到任何满足条件的对象"];
-  }
-  return obj;
-}
-/**
- *  @author Hzt, 2016-12-29 14:12:12
- *
- *  @brief 返回第一个满足条件的对象.如果没有找到则返回Null
- *
- *  @param boolBlock block表达式.表示是否满足条件
- *
- *  @return 第一个满足条件的对象.没有则返回nil
- */
-- (id)FirstOrNull:(BoolBlock)boolBlock {
-  for (int i = 0; i < [self count]; i++) {
-    id item = [self objectAtIndex:i];
-    if (boolBlock(item)) {
-      return item;
+- (id)First:(BoolBlock)boolBlock
+{
+    id obj = [self FirstOrNull:boolBlock];
+    if (!obj) {
+        [NSException raise:@"没有找到任何满足条件的对象"
+                    format:@"没有找到任何满足条件的对象"];
     }
-  }
-  return nil;
+    return obj;
 }
-/**
- *  @author Hzt, 2016-12-29 14:12:12
- *
- *  @brief 返回所有满足表达式条件的对象
- *
- *  @param boolBlock block表达式.表示是否满足条件
- *
- *  @return 所有满足条件的对象集合.如果没有找到则count为0
- */
-- (NSArray *)Where:(BoolBlock)boolBlock {
-  NSMutableArray *result = [NSMutableArray array];
-  for (int i = 0; i < [self count]; i++) {
-    id item = [self objectAtIndex:i];
-    if (boolBlock(item)) {
-      [result addObject:item];
+
+- (id)FirstOrNull:(BoolBlock)boolBlock
+{
+    for (int i = 0; i < [self count]; i++) {
+        id item = [self objectAtIndex:i];
+        if (boolBlock(item)) {
+            return item;
+        }
     }
-  }
-  return result.copy;
+    return nil;
 }
+
+- (NSArray*)Where:(BoolBlock)boolBlock
+{
+    NSMutableArray* result = [NSMutableArray array];
+    for (int i = 0; i < [self count]; i++) {
+        id item = [self objectAtIndex:i];
+        if (boolBlock(item)) {
+            [result addObject:item];
+        }
+    }
+    return result.copy;
+}
+
+- (BOOL)containsWithObjecte:(id)object
+{
+    return [self containsObject:object];
+}
+
+- (NSArray*)arrayWithStartIndex:(NSInteger)startIndex
+{
+    NSInteger endIndex = self.count - startIndex;
+    return [self arrayWithStartIndex:startIndex endIndex:endIndex];
+}
+
+- (NSArray*)arrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
+{
+    NSInteger length = endIndex - startIndex;
+    return [self arrayWithStartIndex:startIndex length:length];
+}
+
+- (NSArray*)arrayWithStartIndex:(NSInteger)startIndex length:(NSInteger)length
+{
+    NSAssert(startIndex >= 0 && startIndex < self.count, @"startIndex越界");
+    NSAssert(length >= 0 && (startIndex + length) <= self.count, @"length越界");
+    NSMutableArray* resultArrayM = [NSMutableArray arrayWithCapacity:length];
+    for (NSInteger i = startIndex; i < (startIndex + length); i++) {
+        id item = self[i];
+        [resultArrayM addObject:item];
+    }
+    return resultArrayM.copy;
+}
+
+-(NSArray *)convertToOtherObjectWithBlock:(IDBlock)block{
+    NSAssert(block, @"未设置参数");
+    NSMutableArray *resultArrayM = [NSMutableArray arrayWithCapacity:self.count];
+    for (int i = 0; i<self.count; i++) {
+        id item = self[i];
+        id resultObj = block(item);
+        [resultArrayM addObject:resultObj];
+    }
+    return resultArrayM;
+}
+
 @end

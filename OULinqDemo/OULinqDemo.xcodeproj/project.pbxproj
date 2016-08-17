@@ -13,10 +13,10 @@
 		68E31EE81BFA0387008D2BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EE61BFA0387008D2BD5 /* Main.storyboard */; };
 		68E31EEA1BFA0387008D2BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EE91BFA0387008D2BD5 /* Assets.xcassets */; };
 		68E31EED1BFA0387008D2BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EEB1BFA0387008D2BD5 /* LaunchScreen.storyboard */; };
-		68E31EF91BFA04A7008D2BD5 /* NSArray+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */; settings = {ASSET_TAGS = (); }; };
-		68E31EFC1BFA04B4008D2BD5 /* NSDictionary+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */; settings = {ASSET_TAGS = (); }; };
-		68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */; settings = {ASSET_TAGS = (); }; };
-		68E31F0F1BFA2355008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31F0E1BFA2355008D2BD5 /* System.Linq.Enumerable.cs */; settings = {ASSET_TAGS = (); }; };
+		68E31EF91BFA04A7008D2BD5 /* NSArray+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EF81BFA04A6008D2BD5 /* NSArray+OU.m */; };
+		68E31EFC1BFA04B4008D2BD5 /* NSDictionary+OU.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E31EFB1BFA04B4008D2BD5 /* NSDictionary+OU.m */; };
+		68E31EFE1BFA1066008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31EFD1BFA1066008D2BD5 /* System.Linq.Enumerable.cs */; };
+		68E31F0F1BFA2355008D2BD5 /* System.Linq.Enumerable.cs in Resources */ = {isa = PBXBuildFile; fileRef = 68E31F0E1BFA2355008D2BD5 /* System.Linq.Enumerable.cs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,7 +173,7 @@
 				TargetAttributes = {
 					68E31ED91BFA0387008D2BD5 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = M6M3PHR9R8;
+						DevelopmentTeam = F9MTSC86MU;
 					};
 					68E31F031BFA15E5008D2BD5 = {
 						CreatedOnToolsVersion = 7.0;
@@ -359,11 +359,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OULinqDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -371,11 +374,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OULinqDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = houzhitong.OULinqDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

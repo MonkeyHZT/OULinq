@@ -4,122 +4,20 @@
 //
 //  Created by HouZhiTong on 15/11/16.
 //  Copyright © 2015年 com.houzhitong. All rights reserved.
-//
-//
-//                            _ooOoo_
-//                           o8888888o
-//                           88" . "88
-//                           (| -_- |)
-//                            O\ = /O
-//                        ____/`---'\____
-//                      .   ' \\| |// `.
-//                       / \\||| : |||// \
-//                     / _||||| -:- |||||- \
-//                       | | \\\ - /// | |
-//                     | \_| ''\---/'' | |
-//                      \ .-\__ `-` ___/-. /
-//                   ___`. .' /--.--\ `. . __
-//                ."" '< `.___\_<|>_/___.' >'"".
-//               | | : `- \`.;`\ _ /`;.`/ - ` : | |
-//                 \ \ `-. \_ __\ /__ _/ .-` / /
-//         ======`-.____`-.___\_____/___.-`____.-'======
-//                            `=---='
-//
-//         .............................................
-//                  佛祖保佑             永无BUG
-//          佛曰:
-//                  写字楼里写字间，写字间里程序员；
-//                  程序人员写程序，又拿程序换酒钱。
-//                  酒醒只在网上坐，酒醉还来网下眠；
-//                  酒醉酒醒日复日，网上网下年复年。
-//                  但愿老死电脑间，不愿鞠躬老板前；
-//                  奔驰宝马贵者趣，公交自行程序员。
-//                  别人笑我忒疯癫，我笑自己命太贱；
-//                  不见满街漂亮妹，哪个归得程序员？
-
-/**
- *
- * ━━━━━━神兽出没━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
- * 　　　　┃　　　┃    神兽保佑,代码无bug
- * 　　　　┃　　　┃
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- *
- * ━━━━━━感觉萌萌哒━━━━━━
- */
-
-/**
- * 　　　　　　　　┏┓　　　┏┓
- * 　　　　　　　┏┛┻━━━┛┻┓
- * 　　　　　　　┃　　　　　　　┃
- * 　　　　　　　┃　　　━　　　┃
- * 　　　　　　　┃　＞　　　＜　┃
- * 　　　　　　　┃　　　　　　　┃
- * 　　　　　　　┃...　⌒　...　┃
- * 　　　　　　　┃　　　　　　　┃
- * 　　　　　　　┗━┓　　　┏━┛
- * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal
- * protecting
- * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
- * 　　　　　　　　　┃　　　┃
- * 　　　　　　　　　┃　　　┃
- * 　　　　　　　　　┃　　　┃
- * 　　　　　　　　　┃　　　┃
- * 　　　　　　　　　┃　　　┗━━━┓
- * 　　　　　　　　　┃　　　　　　　┣┓
- * 　　　　　　　　　┃　　　　　　　┏┛
- * 　　　　　　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　　　　　　┃┫┫　┃┫┫
- * 　　　　　　　　　　┗┻┛　┗┻┛
- */
-
-/**
- *　　　　　　　　┏┓　　　┏┓+ +
- *　　　　　　　┏┛┻━━━┛┻┓ + +
- *　　　　　　　┃　　　　　　　┃
- *　　　　　　　┃　　　━　　　┃ ++ + + +
- *　　　　　　 ████━████ ┃+
- *　　　　　　　┃　　　　　　　┃ +
- *　　　　　　　┃　　　┻　　　┃
- *　　　　　　　┃　　　　　　　┃ + +
- *　　　　　　　┗━┓　　　┏━┛
- *　　　　　　　　　┃　　　┃
- *　　　　　　　　　┃　　　┃ + + + +
- *　　　　　　　　　┃　　　┃　　　　Code is far away from bug with the animal
- *protecting
- *　　　　　　　　　┃　　　┃ + 　　　　神兽保佑,代码无bug
- *　　　　　　　　　┃　　　┃
- *　　　　　　　　　┃　　　┃　　+
- *　　　　　　　　　┃　 　　┗━━━┓ + +
- *　　　　　　　　　┃ 　　　　　　　┣┓
- *　　　　　　　　　┃ 　　　　　　　┏┛
- *　　　　　　　　　┗┓┓┏━┳┓┏┛ + + + +
- *　　　　　　　　　　┃┫┫　┃┫┫
- *　　　　　　　　　　┗┻┛　┗┻┛+ + + +
- */
 
 #import <Foundation/Foundation.h>
 /**
  *  传入一个参数.返回一个对比的BOOL值
  *
- *  @param parameter 遍历集合时的具体对象
- *
  *  @return 对比结果
  */
 typedef BOOL (^BoolBlock)(id parameter);
+/**
+ *  @brief 传入一个id类型参数.返回一个id类型对象
+ *
+ *  @return 返回一个id类型对象
+ */
+typedef id (^IDBlock)(id parameter);
 
 @interface NSArray (OU)
 
@@ -139,10 +37,9 @@ typedef BOOL (^BoolBlock)(id parameter);
 */
 - (BOOL)Any;
 
+
 /**
  *  检测集合中是否有任意一个元素满足条件
- *
- *  @param boolBlock block表达式.表示是否满足条件
  *
  *  @return YES表示至少有一个满足条件.NO表示全部不满足
  */
@@ -152,8 +49,6 @@ typedef BOOL (^BoolBlock)(id parameter);
  *
  *  @brief 返回第一个满足条件的对象.如果没有任何满足的会抛出异常
  *
- *  @param boolBlock block表达式.表示是否满足条件
- *
  *  @return 第一个满足条件的对象.没有则抛异常
  */
 - (id)First:(BoolBlock)boolBlock;
@@ -161,8 +56,6 @@ typedef BOOL (^BoolBlock)(id parameter);
  *  @author Hzt, 2016-12-29 14:12:12
  *
  *  @brief 返回第一个满足条件的对象.如果没有找到则返回Null
- *
- *  @param boolBlock block表达式.表示是否满足条件
  *
  *  @return 第一个满足条件的对象.没有则返回nil
  */
@@ -172,10 +65,49 @@ typedef BOOL (^BoolBlock)(id parameter);
  *
  *  @brief 返回所有满足表达式条件的对象
  *
- *  @param boolBlock block表达式.表示是否满足条件
- *
  *  @return 所有满足条件的对象集合.如果没有找到则count为0
  */
-- (NSArray *)Where:(BoolBlock)boolBlock;
+- (NSArray*)Where:(BoolBlock)boolBlock;
+
+//public static bool Contains<TSource>(this IEnumerable<TSource> source, TSource value);
+
+/**
+ *  @brief 当前集合是否包含指定内容对象
+ *
+ *  @return 是否包含对象
+ */
+-(BOOL)containsWithObjecte:(id)object;
+/**
+ *  @brief 从startIndex开始截取到末尾
+ *
+ *  @param startIndex 开始的位置
+ *
+ *  @return 返回一个截取到的arr
+ */
+-(NSArray *)arrayWithStartIndex:(NSInteger)startIndex;
+/**
+ *  @brief 从startIndex截取到endIndex位置
+ *
+ *  @param startIndex 开始的位置
+ *  @param endIndex   结束的位置
+ *
+ *  @return 返回一个截取到的arr
+ */
+-(NSArray *)arrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex;
+/**
+ *  @brief 从startIndex开始,截取length个长度的对象
+ *
+ *  @param startIndex 开始的位置
+ *  @param length     要截取的长度
+ *
+ *  @return 返回一个截取到的arr
+ */
+-(NSArray *)arrayWithStartIndex:(NSInteger)startIndex length:(NSInteger)length;
+/**
+ *  @brief 遍历自身所有对象.对每个对象都执行一次block并返回一个新的id类型对象
+ *
+ *  @return 新的结果集对象
+ */
+-(NSArray *)convertToOtherObjectWithBlock:(IDBlock)block;
 
 @end
