@@ -159,4 +159,14 @@ typedef float (^FloatBlock)(id parameter);
  */
 -(float)minWithBlock:(FloatBlock)block;
 
+
+//OrderBy
+
+/**
+ *  @brief 将集合中的每个元素进行转换.返回转换后的新集合
+ *
+ *  @return 转换后的集合
+ */
+-(NSArray *)selectWithBlock:(IDBlock)block;
+
 @end

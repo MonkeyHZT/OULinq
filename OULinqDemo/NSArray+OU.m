@@ -190,5 +190,17 @@
     }
     return min;
 }
+- (NSArray*)selectWithBlock:(IDBlock)block
+{
+    NSAssert(block, @"未设置参数");
+     NSMutableArray* resultArrayM = [NSMutableArray arrayWithCapacity:self.count];
+    forEachSelfCount
+    {
+        id item = self[i];
+        id resultObj = block(item);
+        [resultArrayM addObject:resultObj];
+    }
+    return resultArrayM.copy;
+}
 
 @end
