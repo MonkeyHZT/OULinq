@@ -99,7 +99,7 @@ typedef float (^FloatBlock)(id parameter);
  *
  *  @return 返回一个截取到的arr
  */
--(NSArray *)ArrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex;
+-(NSArray *)arrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex;
 /**
  *  @brief 从startIndex开始,截取length个长度的对象
  *
@@ -135,10 +135,28 @@ typedef float (^FloatBlock)(id parameter);
  */
 -(id)lastWithBlock:(BoolBlock)block;
 /**
- *  @brief 遍历每个item.并在block中返回要统计的属性值.累加所有后返回
+ *  @brief 将block中返回统计的属性值累加并返回
  *
  *  @return block中返回属性的总数
  */
 -(float)sumWithBlock:(FloatBlock)block;
+/**
+ *  @brief 统计满足条件的对象个数
+ *
+ *  @return 满足条件的对象个数
+ */
+-(NSInteger)longCountWithBlock:(BoolBlock)block;
+/**
+ *  @brief 返回block返回值中的最大值
+ *
+ *  @return block返回值中的最大值
+ */
+-(float)maxWithBlock:(FloatBlock)block;
+/**
+ *  @brief 返回block返回值中的最小值
+ *
+ *  @return block返回值中的最小值
+ */
+-(float)minWithBlock:(FloatBlock)block;
 
 @end

@@ -154,5 +154,41 @@
     }
     return sum;
 }
+- (NSInteger)longCountWithBlock:(BoolBlock)block
+{
+    return [[self where:block] count];
+}
+
+- (float)maxWithBlock:(FloatBlock)block
+{
+    NSAssert(block, @"未设置参数");
+    float max = 0;
+    forEachSelfCount
+    {
+        id item = self[i];
+        float currentFloat = block(item);
+        if (currentFloat > max) {
+            max = currentFloat;
+        }
+    }
+    return max;
+}
+- (float)minWithBlock:(FloatBlock)block
+{
+    NSAssert(block, @"未设置参数");
+    float min = 0;
+    forEachSelfCount
+    {
+        id item = self[i];
+        float currentFloat = block(item);
+        if (i == 0) {
+            min = currentFloat;
+        }
+        if (currentFloat < min) {
+            min = currentFloat;
+        }
+    }
+    return min;
+}
 
 @end
